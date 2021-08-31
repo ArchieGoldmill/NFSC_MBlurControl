@@ -8,12 +8,12 @@ void Init()
 {
 	CIniReader iniReader("NFSCMBlurControl.ini");
 
-	BlurStart = iniReader.ReadFloat((char*)"GENERAL", (char*)"BlurStart", 350.0f);
-	BlurEnd = iniReader.ReadFloat((char*)"GENERAL", (char*)"BlurEnd", 350.0f);
-	BlurIntensity = iniReader.ReadFloat((char*)"GENERAL", (char*)"BlurIntensity", 0.3f);
+	BlurStart = iniReader.ReadFloat((char*)"BLUR", (char*)"Start", 350.0f);
+	BlurEnd = iniReader.ReadFloat((char*)"BLUR", (char*)"End", 350.0f);
+	BlurIntensity = iniReader.ReadFloat((char*)"BLUR", (char*)"Intensity", 0.3f);
 
-	injector::WriteMemory<float*>(0x00726467, &BlurStart, true);
-	injector::WriteMemory<float*>(0x00726491, &BlurEnd, true);
+	injector::WriteMemory<float*>(0x00726467, &BlurEnd, true);
+	injector::WriteMemory<float*>(0x00726491, &BlurStart, true);
 	injector::WriteMemory<float>(0x00A63FE4, BlurIntensity, true);
 }
 
