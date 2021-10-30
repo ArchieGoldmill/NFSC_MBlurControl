@@ -1,14 +1,10 @@
-#include "pch.h"
+#include <Windows.h>
 #include "IniReader.h"
 #include "injector/injector.hpp"
 
 int* GameState = (int*)0xA99BBC;
 auto PVehicle_GetAIVehiclePtr = (void* (__thiscall*)(void*))0x006D8110;
 float* DeltaTime = (float*)0x00A99A5C;
-
-//float _BlurStart, _BlurEnd, _BlurIntensity;
-//float BlurStart, BlurEnd, BlurIntensity;
-//float NosBlurStart, NosBlurEnd, NosBlurIntensity, NosTime;
 
 class BlurSettings
 {
@@ -109,6 +105,10 @@ void __stdcall MainLoopTick()
 
 			isUsingNos ? _Blur.IncreaseBy(step, NosBlur) : _Blur.DecreaseBy(step, Blur);
 		}
+	}
+	else
+	{
+		_Blur = Blur;
 	}
 
 	__asm popad;

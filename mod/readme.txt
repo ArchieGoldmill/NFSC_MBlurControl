@@ -4,7 +4,7 @@ Description:
 This mod allows to control various settings of motion blur in game.
 
 How to install:
-1. Drop everything from "NFSCMBlurControl" to your game folder
+1. Drop everything from "Install" to your game folder
 2. Change settings in "scripts/NFSCMBlurControl.ini"
 
 Distribution:
