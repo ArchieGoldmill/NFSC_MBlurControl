@@ -195,7 +195,7 @@ public:
 		}
 	}
 
-	float ReadFloat(char* szSection, char* szKey, float fltDefaultValue)
+	float ReadFloat(const char* szSection, const char* szKey, float fltDefaultValue)
 	{
 		try {
 			return (float)atof(data.get(szSection, szKey, std::to_string(fltDefaultValue)).c_str());
