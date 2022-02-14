@@ -4,7 +4,12 @@
 
 int* GameState = (int*)0xA99BBC;
 auto PVehicle_GetAIVehiclePtr = (void* (__thiscall*)(void*))0x006D8110;
+auto sub_7F12A0 = (int(__thiscall*)(int, int))0x007F12A0;
+auto RenderInGameCars = (int(__cdecl*)(int, int))0x007BF7C0;
+auto RenderWorldFlares = (int(__cdecl*)(int))0x007507D0;
+auto RenderVehicleFlares = (int(__cdecl*)(int, int, int))0x007D5DC0;
 float* DeltaTime = (float*)0x00A99A5C;
+float* RoadCarReflectionsDist = (float*)0x009EEC70;
 
 class BlurSettings
 {
@@ -83,6 +88,7 @@ private:
 	}
 };
 
+
 BlurSettings _Blur, Blur, NosBlur;
 float NosBlurTime;
 
@@ -114,6 +120,20 @@ void __stdcall MainLoopTick()
 	__asm popad;
 }
 
+int __fastcall RoadCarReflectionsHook(int _this, int param, int a2)
+{
+	int result = sub_7F12A0(_this, a2);
+	RenderInGameCars(0x00B4B110, 1);
+	return result;
+}
+
+int __cdecl RenderWorldFlaresHook(int view)
+{
+	int result = RenderWorldFlares(view);
+	RenderVehicleFlares(view, 1, 0);
+	return result;
+}
+
 void Init()
 {
 	CIniReader iniReader("NFSCMBlurControl.ini");
@@ -123,7 +143,7 @@ void Init()
 		iniReader.ReadFloat("BLUR", "End", 350.0f),
 		iniReader.ReadFloat("BLUR", "Intensity", 0.3f)
 	);
-
+	 
 	NosBlur = BlurSettings(
 		iniReader.ReadFloat("NOS_BLUR", "Start", 350.0f),
 		iniReader.ReadFloat("NOS_BLUR", "End", 350.0f),
@@ -149,6 +169,21 @@ void Init()
 	{
 		injector::WriteMemory<unsigned char>(0x00492F34, 0xEB, true);
 	}
+
+	if (iniReader.ReadInteger("FIXES", "RoadCarReflections", 0) == 1)
+	{
+		injector::MakeCALL(0x0072E141, RoadCarReflectionsHook, true);
+		*RoadCarReflectionsDist = 0.05f;
+	}
+
+	if (iniReader.ReadInteger("FIXES", "RoadCarFlareColor", 0) == 1)
+	{
+		injector::MakeCALL(0x0072E1E0, RenderWorldFlaresHook, true);
+		injector::MakeNOP(0x0072E2C8, 5, true);
+	}
+
+	injector::MakeNOP(0x0073C359, 2, true);
+	injector::MakeNOP(0x0073C371, 2, true);
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
