@@ -33,9 +33,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CarbonApi.h">
-      <Filter>Games\Carbon</Filter>
-    </ClInclude>
     <ClInclude Include="Carbon.h">
       <Filter>Games\Carbon</Filter>
     </ClInclude>

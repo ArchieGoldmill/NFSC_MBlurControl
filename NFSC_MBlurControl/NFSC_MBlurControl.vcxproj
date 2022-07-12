@@ -307,7 +307,6 @@
   <ItemGroup>
     <ClInclude Include="CameraRotation.h" />
     <ClInclude Include="Carbon.h" />
-    <ClInclude Include="CarbonApi.h" />
     <ClInclude Include="MostWanted.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
