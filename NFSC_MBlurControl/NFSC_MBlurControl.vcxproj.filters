@@ -5,18 +5,45 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{50e2678d-45f7-4dd8-ba0a-de4f4f8eb4c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Games">
+      <UniqueIdentifier>{416e186d-bef6-40b3-b3f6-6b7e278d513e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Games\Carbon">
+      <UniqueIdentifier>{8ad5339a-ee04-4e03-b1a7-393ef4cd5273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Games\MostWanted">
+      <UniqueIdentifier>{f4916b13-e08c-4974-8e2b-6f771f4937f8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CameraRotation.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Carbon.cpp">
+      <Filter>Games\Carbon</Filter>
+    </ClCompile>
+    <ClCompile Include="MostWanted.cpp">
+      <Filter>Games\MostWanted</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CarbonApi.h">
+      <Filter>Games\Carbon</Filter>
+    </ClInclude>
+    <ClInclude Include="Carbon.h">
+      <Filter>Games\Carbon</Filter>
+    </ClInclude>
+    <ClInclude Include="MostWanted.h">
+      <Filter>Games\MostWanted</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraRotation.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
