@@ -86,17 +86,18 @@ private:
 
 BlurSettings _Blur, Blur, NosBlur;
 float NosBlurTime;
+float* Game_DeltaTime = (float*)0x00A99A5C;
 
 void __fastcall MainLoopTick(float** _this, int dummy, float a1)
 {
 	CubicCameraMover_Update(_this, a1);
 
 	bool isUsingNos = _this[0x24][0x38] && _this[0x24][0x24] > 0;
-	float* DeltaTime = (float*)0x00A99A5C;
+
 
 	BlurSettings deltaPath = NosBlur - Blur;
 	BlurSettings velocity = deltaPath / NosBlurTime;
-	BlurSettings step = velocity * *DeltaTime;
+	BlurSettings step = velocity * *Game_DeltaTime;
 
 	isUsingNos ? _Blur.IncreaseBy(step, NosBlur) : _Blur.DecreaseBy(step, Blur);
 }
@@ -141,6 +142,9 @@ void Init()
 
 	int* NosTrailCount = (int*)0x00A732A8;
 	*NosTrailCount = iniReader.ReadInteger("GENERAL", "NosTrailCount", 8);
+
+	injector::MakeNOP(0x0073C359, 2, true);
+	injector::MakeNOP(0x0073C371, 2, true);
 }
 
 #endif

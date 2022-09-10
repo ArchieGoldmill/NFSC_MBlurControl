@@ -3,7 +3,7 @@
 #ifdef MOST_WANTED
 void Init()
 {
-	CIniReader iniReader("NFSMWFreeRoamCam.ini");
+	CIniReader iniReader("NFSMWOrbitCamera.ini");
 	InitCamera(iniReader);
 }
 #endif

@@ -133,7 +133,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Most Wanted|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>D:\Games\Need for Speed - Most Wanted\scripts</OutDir>
-    <TargetName>NFSMWFreeRoamCam</TargetName>
+    <TargetName>NFSMWOrbitCamera</TargetName>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -145,7 +145,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Most Wanted|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>D:\Games\Need for Speed - Most Wanted\scripts</OutDir>
-    <TargetName>NFSMWFreeRoamCam</TargetName>
+    <TargetName>NFSMWOrbitCamera</TargetName>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
