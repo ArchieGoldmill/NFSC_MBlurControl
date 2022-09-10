@@ -1,4 +1,4 @@
-NFS Carbon - Motion Blur Control v1.3
+NFS Carbon - Motion Blur Control v1.4
 
 Description:
 This mod allows to control various settings of motion blur in game.
@@ -11,4 +11,4 @@ Distribution:
 You are NOT allowed to distribute or reupload this mod.
 
 Thanks to Tekizyte and Aero_ for help.
-Made by Archie
+Made by ARCHIE

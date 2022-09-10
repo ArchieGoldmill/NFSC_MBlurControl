@@ -7,32 +7,20 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NFSC_MBlurControl", "NFSC_M
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug Carbon|x64 = Debug Carbon|x64
-		Debug Carbon|x86 = Debug Carbon|x86
-		Debug Most Wanted|x64 = Debug Most Wanted|x64
-		Debug Most Wanted|x86 = Debug Most Wanted|x86
-		Release Carbon|x64 = Release Carbon|x64
-		Release Carbon|x86 = Release Carbon|x86
-		Release Most Wanted|x64 = Release Most Wanted|x64
-		Release Most Wanted|x86 = Release Most Wanted|x86
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Carbon|x64.ActiveCfg = Debug|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Carbon|x64.Build.0 = Debug|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Carbon|x86.ActiveCfg = Debug|Win32
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Carbon|x86.Build.0 = Debug|Win32
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Most Wanted|x64.ActiveCfg = Debug Most Wanted|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Most Wanted|x64.Build.0 = Debug Most Wanted|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Most Wanted|x86.ActiveCfg = Debug Most Wanted|Win32
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug Most Wanted|x86.Build.0 = Debug Most Wanted|Win32
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Carbon|x64.ActiveCfg = Release|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Carbon|x64.Build.0 = Release|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Carbon|x86.ActiveCfg = Release|Win32
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Carbon|x86.Build.0 = Release|Win32
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Most Wanted|x64.ActiveCfg = Release Most Wanted|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Most Wanted|x64.Build.0 = Release Most Wanted|x64
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Most Wanted|x86.ActiveCfg = Release Most Wanted|Win32
-		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release Most Wanted|x86.Build.0 = Release Most Wanted|Win32
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug|x64.ActiveCfg = Debug|x64
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug|x64.Build.0 = Debug|x64
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug|x86.ActiveCfg = Debug|Win32
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Debug|x86.Build.0 = Debug|Win32
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release|x64.ActiveCfg = Release|x64
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release|x64.Build.0 = Release|x64
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release|x86.ActiveCfg = Release|Win32
+		{0459193D-EB12-4D39-88BF-3C5BA4C0B0C0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
