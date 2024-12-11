@@ -1,10 +1,10 @@
-NFS Carbon - Motion Blur Control v1.5
+NFS Carbon - Motion Blur Control v1.6
 
 Description:
 This mod allows to control various settings of motion blur in game.
 
 How to install:
-1. Drop everything from "Install" folder to your game folder.
+1. Drop "scripts" folder to your game folder.
 2. Change settings in "scripts/NFSCMBlurControl.ini".
 
 Distribution:

@@ -5,6 +5,7 @@
 auto Game_CubicCameraMover_Update = (int(__thiscall*)(void*, float))0x004921B0;
 auto Game_DeltaTime = (float*)0x00A99A5C;
 auto Game_State = (int*)0x00A99BBC;
+auto Game_NosTrailCount = (int*)0x00A732A8;
 auto Game_BlurUpdate = (BYTE*)0x0048249D;
 auto Game_IsPaused = (bool(__cdecl*)())0x004A62E0;
 auto Game_PhotoModeIn = (void(__thiscall*)(void*, int))0x005BBCC0;
@@ -97,6 +98,12 @@ void Init()
 	{
 		injector::WriteMemory<unsigned char>(Game_BlurUpdate, 0xEB, true);
 	}
+
+	int nosTrailCount = iniReader.ReadInteger("GENERAL", "NosTrailCount", -1);
+	if (nosTrailCount >= 0)
+	{
+		*Game_NosTrailCount = nosTrailCount;
+	}
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
@@ -115,7 +122,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 		}
 		else
 		{
-			MessageBoxA(NULL, "This .exe is not supported.\nPlease use v1.4 English nfsc.exe (6,88 MB (7.217.152 bytes)).", "NFSC - Motion Blur Controll 1.5", MB_ICONERROR);
+			MessageBoxA(NULL, "This .exe is not supported.\nPlease use v1.4 English nfsc.exe (6,88 MB (7.217.152 bytes)).", "NFSC - Motion Blur Controll 1.6", MB_ICONERROR);
 			return FALSE;
 		}
 	}

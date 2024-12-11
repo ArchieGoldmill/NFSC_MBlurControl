@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>D:\Games\Need for Speed Carbon\_ecv3\scripts\</OutDir>
+    <OutDir>..\mod\Install\scripts</OutDir>
     <TargetName>NFSCMBlurControl</TargetName>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
